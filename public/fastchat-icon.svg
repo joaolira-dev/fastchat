@@ -1,0 +1,38 @@
+<!-- fastchat-icon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="240" height="240" role="img" aria-label="FastChat icon: speech bubble with lightning bolt">
+  <defs>
+    <!-- suave sombra -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#1f6fe0" flood-opacity="0.18"></feDropShadow>
+    </filter>
+  </defs>
+
+  <!-- balão arredondado -->
+  <g filter="url(#shadow)">
+    <path d="M14 18
+         C14 11.3726 19.3726 6 26 6
+         H94
+         C100.627 6 106 11.3726 106 18
+         V66
+         C106 72.6274 100.627 78 94 78
+         H44
+         L30 92
+         V78
+         H26
+         C19.3726 78 14 72.6274 14 66
+         V18Z" fill="#2B8AF6"></path>
+  </g>
+
+  <!-- raio (branco) centralizado -->
+  <path d="M61.5 26
+       L48 54
+       H60
+       L45 86
+       L74 52
+       H56
+       L61.5 26Z" fill="#FFFFFF" opacity="0.98"></path>
+
+  <!-- opcional: versão com raio levemente recortado (use se preferir menos contraste)
+  <path d="..." fill="#EAF4FF" opacity="0.9"/>
+  -->
+</svg>

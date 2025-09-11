@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-white to-indigo-50;
+  }
+}
