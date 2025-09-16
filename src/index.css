@@ -1,7 +1,82 @@
 @import "tailwindcss";
 
 @layer base {
+  /* =====================
+     Tema escuro (padrão)
+  ====================== */
+  :root {
+    --background: 0 0% 5%;        /* preto quase total */
+    --foreground: 0 0% 90%;       /* cinza claro */
+    --card: 0 0% 15%;             /* cinza escuro */
+    --primary: 220 80% 60%;       /* azul */
+    --primary-foreground: 0 0% 95%; /* texto do azul */
+    --border: 0 0% 20%;
+  }
+
+  /* =====================
+     Tema claro
+  ====================== */
+  .light {
+    --background: 210 40% 97%;    /* fundo bem claro */
+    --foreground: 222 47% 11%;    /* texto escuro */
+    --card: 0 0% 100%;
+    --primary: 220 80% 60%;
+    --primary-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+  }
+
+  /* =====================
+     Estilos globais
+  ====================== */
   body {
-    @apply bg-gradient-to-b from-white to-indigo-50;
+    @apply transition-colors duration-300;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: sans-serif;
+  }
+
+  /* =====================
+     Variáveis em classes
+  ====================== */
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+
+  /* Light mode → substitui cor sólida por gradiente */
+  .light .bg-background {
+    @apply bg-gradient-to-r from-white to-indigo-100;
+  }
+
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+
+  .bg-card {
+    background-color: hsl(var(--card));
+  }
+
+  .text-primary {
+    color: hsl(var(--primary));
+  }
+
+  .text-primary-foreground {
+    color: hsl(var(--primary-foreground));
+  }
+
+  .border-border {
+    border-color: hsl(var(--border));
+  }
+
+  /* =====================
+     Botões
+  ====================== */
+  .btn-primary {
+    @apply px-6 py-2 rounded-xl shadow-md transition-all duration-300;
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.05);
   }
 }

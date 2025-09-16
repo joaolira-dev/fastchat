@@ -1,14 +1,23 @@
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
+import ProfitSection from "../components/ProfitSection";
+import HowItWorks from "../components/HowItWorks";
+import PlansSection from "../components/PlansSection";
+import ContactSection from "../components/ContactSection";
+
 
 function Home() {
   return (
     <>
-      <Header />
+      <Navbar />
       <HeroSection />
       <AboutSection/>
-    </>
+      <ProfitSection/>
+      <HowItWorks/>
+      <PlansSection/>
+      <ContactSection/>
+  </>
   );
 }
 
